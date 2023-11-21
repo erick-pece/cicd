@@ -1,9 +1,10 @@
 runtime: python39
 instance_class: F2
 
+entrypoint: flask --app main run --host=0.0.0.0 --port=8081
 handlers:
 # Matches requests to /images/... to files in static/images/...
-entrypoint: flask --app main run --host=0.0.0.0 --port=8081
+
 - url: /.*
   secure: always
 
